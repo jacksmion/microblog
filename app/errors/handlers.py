@@ -1,11 +1,15 @@
-from flask import render_template
-from app import app, db
+# -*- coding:utf-8 -*-
 
-@app.errorhandler(404)
+from flask import render_template
+from app import db
+from app.errors import bp
+
+
+@bp.errorhandler(404)
 def not_found_error(error):
     return render_template('404.html'), 400
 
 
-@app.errorhandler(500)
+@bp.errorhandler(500)
 def internal_error(error):
     return render_template('500.html'), 500
