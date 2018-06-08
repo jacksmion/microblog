@@ -15,3 +15,4 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['zhouhaozt@126.com']
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL') or 'http://192.168.138.76:9200'
+    LANGUAGES = ['en', 'zh']
