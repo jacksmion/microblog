@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, ValidationError, Length
 from app.models import User
+from flask import request
 
 
 
@@ -28,7 +29,7 @@ class PostForm(FlaskForm):
 
 
 class SearchForm(FlaskForm):
-    search = StringField('Search', validators=[DataRequired()])
+    q = StringField('Search', validators=[DataRequired()])
 
     def __init__(self, *args, **kwargs):
         if 'formdata' not in kwargs:
