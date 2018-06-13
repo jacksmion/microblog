@@ -38,7 +38,7 @@ class SearchableMixin(object):
             'add': [obj for obj in session.new if isinstance(obj, cls)],
             'update': [obj for obj in session.dirty if isinstance(obj, cls)],
             'delete': [obj for obj in session.deleted if isinstance(obj, cls)]
-        }
+    }
 
     @classmethod
     def after_commit(cls, session):

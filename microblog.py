@@ -11,4 +11,4 @@ cli.register(app)
 def make_shell_context():
     return {'db':db, 'User':User, 'Post':Post}
 
-app.run()
+app.run(host='0.0.0.0')

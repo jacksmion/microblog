@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-08 17:12+0800\n"
+"POT-Creation-Date: 2018-06-11 09:48+0800\n"
 "PO-Revision-Date: 2018-06-08 16:02+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -119,20 +119,23 @@ msgid "Edit Profile"
 msgstr "编辑资料"
 
 #: app/main/routes.py:86 app/main/routes.py:101
-msgid "User %{username}s not found."
-msgstr "用户%{username}s没有找到."
+#, python-format
+msgid "User %(username)s not found."
+msgstr "用户 %(username)s not found"
 
 #: app/main/routes.py:93
-msgid "You are following %{username}s"
-msgstr "你正在被%{username}s关注"
+#, python-format
+msgid "You are following %(username)s"
+msgstr "你正在关注 %(username)s"
 
 #: app/main/routes.py:104
 msgid "You cannot unfollow yourself!"
 msgstr "你不能关注自己"
 
 #: app/main/routes.py:108
-msgid "You are not following %{username}s"
-msgstr "你没有关注%{username}s"
+#, python-format
+msgid "You are not following %(username)s"
+msgstr "你取消了对%(username)s的关注"
 
 #: app/templates/_post.html:9
 #, python-format
@@ -141,7 +144,7 @@ msgstr "%(username)s 说 %(when)s"
 
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
-msgstr ""
+msgstr "欢迎来微博"
 
 #: app/templates/base.html:17
 msgid "Microblog"
@@ -242,4 +245,13 @@ msgstr "出现了一个意想不到的错误"
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "管理员已经收到通知。为给您带来的不便抱歉!"
+
+#~ msgid "User %{username}s not found."
+#~ msgstr "用户%{username}s没有找到."
+
+#~ msgid "You are following %{username}s"
+#~ msgstr "你正在被%{username}s关注"
+
+#~ msgid "You are not following %{username}s"
+#~ msgstr "你没有关注%{username}s"
 
