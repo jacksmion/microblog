@@ -14,7 +14,7 @@ from flask_babel import lazy_gettext as _l
 
 
 db = SQLAlchemy()
-migrate = Migrate()
+migrate = Migrate(db=db)
 login = LoginManager()
 login.login_view = 'auth.login'
 login.login_message = _l('Please log in to access this page.')

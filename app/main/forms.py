@@ -24,7 +24,7 @@ class EditProfileForm(FlaskForm):
                 raise ValidationError(_('Please use a different username.'))
 
 class PostForm(FlaskForm):
-    post = StringField(_l('Say something'), validators=[DataRequired(), Length(min=0, max=140)])
+    post = TextAreaField(_l('Say something'), validators=[DataRequired(), Length(min=0, max=140)])
     submit = SubmitField(_l('Submit'))
 
 
@@ -37,3 +37,8 @@ class SearchForm(FlaskForm):
         if 'csrf_enabled' not in kwargs:
             kwargs['csrf_enabled'] = False
         super(SearchForm, self).__init__(*args, **kwargs)
+
+
+class MessageForm(FlaskForm):
+    message = TextAreaField(_l('message'), validators=[DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField(_l('Submit'))
